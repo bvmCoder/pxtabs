@@ -16,10 +16,27 @@
 </head>
 
 <body>
+  <!-- begin simple header -->
   <header>
     <h1>Responsive Tabs and Navigation</h1>
   </header>
-  <!-- cd-tabs -->
+  <!-- end simple header -->
+  <!-- begin cd-tabs -->
+  <div class="cd-tabs">
+    <nav>
+      <!-- begin cd-tabs-navigation -->
+      <ul class="cd-tabs-navigation">
+        <li><a data-content="users" class="selected" href="#0">Users</a></li>
+        <li><a data-content="roles" href="#0">Roles</a></li>
+        <li><a data-content="noOfUsers" href="#0">Users Assigned</a></li>
+        <li><a data-content="noOfRoles" href="#0">Roles Assigned</a></li>
+        <li><a data-content="usersHistory" href="#0">Users History</a></li>
+        <li><a data-content="rolesHistory" href="#0">Roles History</a></li>
+      </ul>
+      <!-- end cd-tabs-navigation -->
+    </nav>
+  </div>
+  <!--  end cd-tabs -->
   <script src="js/jquery-2.2.0.js"></script>
   <!-- Resource jQuery -->
   <script src="js/tabs.js"></script>
