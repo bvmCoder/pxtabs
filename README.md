@@ -1,0 +1,2 @@
+jQuery Tabs 
+Responsive
