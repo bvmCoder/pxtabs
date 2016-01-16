@@ -8,7 +8,7 @@ $(function() {
 
 
 
-    tabs.each(function() {
+    $tabs.each(function() {
         var tab = $(this),
             tabItems = tab.find('ul.cd-tabs-navigation'),
             tabContentWrapper = tab.children('ul.cd-tabs-content'),
@@ -40,20 +40,20 @@ $(function() {
     });
 
     $(window).resize(function() {
-        tabs.each(function() {
+        $tabs.each(function() {
             var tab = $(this);
             checkScrolling(tab.find('nav'));
             tab.find('.cd-tabs-content').css('height', 'auto');
         });
     });
 
-    function checkScrolling(tabs) {
-        var totalTabWidth = parseInt(tabs.children('.cd-tabs-navigation').width()),
-            tabsViewport = parseInt(tabs.width());
-        if (tabs.scrollLeft() >= totalTabWidth - tabsViewport) {
-            tabs.parent('.cd-tabs').addClass('is-ended');
+    function checkScrolling($tabs) {
+        var totalTabWidth = parseInt($tabs.children('.cd-tabs-navigation').width()),
+            tabsViewport = parseInt($tabs.width());
+        if ($tabs.scrollLeft() >= totalTabWidth - tabsViewport) {
+            $tabs.parent('.cd-tabs').addClass('is-ended');
         } else {
-            tabs.parent('.cd-tabs').removeClass('is-ended');
+            $tabs.parent('.cd-tabs').removeClass('is-ended');
         }
     }
 
