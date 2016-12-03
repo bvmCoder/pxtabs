@@ -62,23 +62,23 @@ $(function() {
 
 
 const getStyle = function getStyle (elem, value) {
-    let view = elem.ownerDocument.defaultView;
-    let map = {};
+    let view = elem.ownerDocument.defaultView
+    let map = {}
     if (!view || !view.opener ) {
-            view = window;
+            view = window
     }
 
-    let getAllStyle = view.getComputedStyle(elem);
+    let getAllStyle = view.getComputedStyle(elem)
     if (Array.isArray(value)) {
-        const length = value.length;
-        let i = 0;
+        const length = value.length
+        let i = 0
 
         for ( ; i < length; i++ ) {
-                map[ value[ i ] ] = getAllStyle[value[i]];
+                map[ value[ i ] ] = getAllStyle[value[i]]
         }
 
-        return map;
+        return map
     }
-    const styleValue = getAllStyle[value];
-    return styleValue;
+    const styleValue = getAllStyle[value]
+    return styleValue
 };
